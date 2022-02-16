@@ -1,0 +1,32 @@
+﻿<Window x:Class="ChatServer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatServer"
+        mc:Ignorable="d"
+        Title="Chat server" Height="347" Width="755" MinWidth="755" MaxWidth="755" MinHeight="355" MaxHeight="355">
+    <Grid Margin="0,0,0,-16" Width="740" MaxWidth="755" MinHeight="0" MaxHeight="355" Height="325">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="149" Margin="10,1,0,0" VerticalAlignment="Top" Width="398"/>
+        <Border BorderThickness="1" BorderBrush="Black" Margin="413,1,10,26"/>
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Margin="10,153,0,26" Width="398"/>
+        <Button x:Name="btnStartServer" Content="Start" HorizontalAlignment="Left" Margin="227,117,0,0" VerticalAlignment="Top" Height="23" Width="82" Click="btnStartServer_Click"/>
+        <Button x:Name="btnStopServer" Content="Stop" HorizontalAlignment="Left" Margin="314,117,0,0" VerticalAlignment="Top" Width="81" Height="24" Click="btnStopServer_Click"/>
+        <TextBox x:Name="txtbPort" Margin="328,27,356,0" TextWrapping="NoWrap" VerticalAlignment="Top" Height="19" MaxLines="1" MaxLength="6"/>
+        <Label x:Name="lblHost" Content="Choose interface" HorizontalAlignment="Left" Margin="8,1,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="lstbLogInfo" Margin="20,186,0,39" HorizontalAlignment="Left" Width="377"/>
+        <Label x:Name="lblLogInfo" Content="Logger info" HorizontalAlignment="Left" Margin="12,155,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="lstbUsers" Margin="423,25,22,39"/>
+        <Label x:Name="lblRegisteredUsers" Content="Registered users" HorizontalAlignment="Left" Margin="420,1,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblKickAFK" Content="AFK timeout" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cmbxHost" HorizontalAlignment="Left" Margin="14,25,0,0" VerticalAlignment="Top" Width="309" Height="23"/>
+        <ComboBox x:Name="cmbxTimeout" HorizontalAlignment="Left" Margin="14,66,0,0" VerticalAlignment="Top" Width="50" InputScope="Number"/>
+        <Label x:Name="lblPort" Content="Enter port" HorizontalAlignment="Left" Margin="323,1,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="chckAllowDupNames" Content="Allow duplicate names" HorizontalAlignment="Left" Margin="14,101,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <Label x:Name="lblSec" Content="sec" HorizontalAlignment="Left" Margin="63,63,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

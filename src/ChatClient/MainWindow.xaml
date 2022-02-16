@@ -1,0 +1,31 @@
+﻿<Window x:Class="ChatClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatClient"
+        mc:Ignorable="d"
+        Title="Chat Client" Height="455" Width="780">
+    <Grid ScrollViewer.VerticalScrollBarVisibility="Disabled" Height="450" Width="800" MaxWidth="800" MaxHeight="450">
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="98" Margin="10,9,0,0" VerticalAlignment="Top" Width="418"/>
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="294" Margin="10,112,0,0" VerticalAlignment="Top" Width="418"/>
+        <Border BorderThickness="1" BorderBrush="Black" Height="396" Margin="443,10,48,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtbHost" HorizontalAlignment="Left" Margin="153,31,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="165" Height="19" MaxLines="1" MaxLength="50"/>
+        <TextBox x:Name="txtbPort" HorizontalAlignment="Left" Margin="323,31,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="87" Height="19" MaxLines="1" MaxLength="6"/>
+        <Label x:Name="lblHost" Content="Enter host" HorizontalAlignment="Left" Margin="153,9,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblPort" Content="Enter port" HorizontalAlignment="Right" Margin="0,9,413,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnConnect" Content="Connect" HorizontalAlignment="Left" Margin="231,68,0,0" VerticalAlignment="Top" Height="23" Width="87" Click="btnConnect_Click" RenderTransformOrigin="0.671,0.697"/>
+        <Button x:Name="btnDisconnect" Content="Disconnect" HorizontalAlignment="Left" Margin="324,68,0,0" VerticalAlignment="Top" Width="86" Height="22" Click="btnDisconnect_Click"/>
+        <ListBox x:Name="lstbMessages" Margin="28,138,390,91"/>
+        <ListBox x:Name="lstbUserList" Margin="452,31,59,82"/>
+        <TextBox x:Name="txtSendinput" HorizontalAlignment="Left" Margin="28,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" Height="22"/>
+        <Button x:Name="btnSend" Content="Send" HorizontalAlignment="Left" Margin="341,374,0,0" VerticalAlignment="Top" Height="22" Width="69" Click="btnSend_Click"/>
+        <Button x:Name="btnRefreshUserList" Content="Get users" HorizontalAlignment="Left" Margin="669,374,0,0" VerticalAlignment="Top" Click="btnRefreshUserList_Click" Height="22" Width="72"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="28,31,0,0" Text="John Doe" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="19"/>
+        <Label x:Name="lblName" Content="Name" HorizontalAlignment="Left" Margin="24,9,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblUserList" Content="User list" HorizontalAlignment="Left" Margin="452,9,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblChatWithUser" Content="Chat: " HorizontalAlignment="Left" Margin="23,112,0,0" VerticalAlignment="Top"/>
+
+
+    </Grid>
+</Window>
